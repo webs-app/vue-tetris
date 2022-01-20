@@ -19,13 +19,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Run a one-line script
+      - name: 安装依赖、打包成zip
         run: |
           npm install 
           npm run build
           ls
           cd ./dist
           zip -q -r tetris.zip ./
+          ls
       - name: 读取webApp json 的信息
         uses: antifree/json-to-variables@v1.0.1
         with:
