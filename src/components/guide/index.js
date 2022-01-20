@@ -12,12 +12,21 @@ export default {
     github: () => i18n.github[lan],
     QRCode: () => i18n.QRCode[lan],
     QRTitle: () => i18n.QRNotice[lan],
-    QRSrc: () =>
-      window.location.protocol +
-      '//raw.githubusercontent.com/Binaryify/vue-tetris/master/static/qr.jpeg'
+    QRSrc: () =>{}
+      // window.location.protocol +
+      // '//raw.githubusercontent.com/Binaryify/vue-tetris/master/static/qr.jpeg'
   },
   mounted() {
     window.addEventListener('resize', this.resize.bind(this), true)
+    window.$G&&window.$G.setScreenOrientation({
+        orientation:"portrait",
+        success(info){
+            console.log("info")
+        },
+        fail(err){
+            console.log(err)
+        },
+    });
   },
   methods: {
     resize() {

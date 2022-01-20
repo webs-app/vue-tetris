@@ -13,9 +13,9 @@ export const hasWebAudioAPI = {
 
 export const music = {}
 ;(() => {
-  if (!hasWebAudioAPI.data) {
-    return
-  }
+  // if (!hasWebAudioAPI.data) {
+  //   return
+  // }
   const url = './static/music.mp3'
   const context = new AudioContext()
   const req = new XMLHttpRequest()
