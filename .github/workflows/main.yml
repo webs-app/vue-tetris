@@ -33,7 +33,7 @@ jobs:
           prefix: webApp
       - uses: ncipollo/release-action@v1
         with:
-          artifacts: "tetris.zip"
+          artifacts: "./dist/tetris.zip"
           tag: v${{ env.webApp_version }}
           name:  v${{ env.webApp_version }}
           token: ${{ secrets.GITHUB_TOKEN }}
