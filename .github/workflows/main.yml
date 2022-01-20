@@ -29,7 +29,7 @@ jobs:
       - name: 读取webApp json 的信息
         uses: antifree/json-to-variables@v1.0.1
         with:
-          filename: 'webApp.json'
+          filename: './dist/webApp.json'
           prefix: webApp
       - uses: ncipollo/release-action@v1
         with:
