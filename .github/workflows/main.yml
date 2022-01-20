@@ -1,0 +1,38 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: 安装依赖、打包成zip
+        run: |
+          npm install 
+          npm run build
+          ls
+          cd ./dist
+          zip -q -r tetris.zip ./
+          ls
+      - name: 读取webApp json 的信息
+        uses: antifree/json-to-variables@v1.0.1
+        with:
+          filename: './dist/webApp.json'
+          prefix: webApp
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "./dist/tetris.zip"
+          tag: v${{ env.webApp_version }}
+          name:  v${{ env.webApp_version }}
+          token: ${{ secrets.GITHUB_TOKEN }}
