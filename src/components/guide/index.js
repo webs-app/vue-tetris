@@ -18,15 +18,20 @@ export default {
   },
   mounted() {
     window.addEventListener('resize', this.resize.bind(this), true)
-    window.$G&&window.$G.setScreenOrientation({
-        orientation:"portrait",
-        success(info){
-            console.log("info")
-        },
-        fail(err){
-            console.log(err)
-        },
-    });
+    
+
+    window.onload = function(){
+      window.$G.removeBackButton();
+      window.$G&&window.$G.setScreenOrientation({
+          orientation:"portrait",
+          success(info){
+              console.log("info")
+          },
+          fail(err){
+              console.log(err)
+          },
+      });
+    }
   },
   methods: {
     resize() {

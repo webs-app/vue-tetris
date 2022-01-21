@@ -28,7 +28,8 @@ export default {
     labelDropSpace: () => `${i18n.drop[lan]} (SPACE)`,
     labelResetR: () => `${i18n.reset[lan]}(R)`,
     labelSoundS: () => `${i18n.sound[lan]}(S)`,
-    labelPauseP: () => `${i18n.pause[lan]}(P)`
+    labelPauseP: () => `${i18n.pause[lan]}(P)`,
+    labelExitE: () => `${i18n.exitGame[lan]}(E)`
   },
   mounted() {
     const touchEventCatch = {} // 对于手机操作, 触发了touchstart, 将作出记录, 不再触发后面的mouse事件

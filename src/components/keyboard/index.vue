@@ -53,6 +53,15 @@
           :active="keyboard['drop']"
           ref="dom_space"
         />
+         <vbutton
+          color="green"
+          size="s2"
+          :top="0"
+          :left="286"
+          :label="labelSoundS"
+          :active="keyboard['music']"
+          ref="dom_s"
+        />
         <vbutton
           color="red"
           size="s2"
@@ -67,18 +76,18 @@
           size="s2"
           :top="0"
           :left="106"
-          :label="labelSoundS"
-          :active="keyboard['music']"
-          ref="dom_s"
-        />
-        <vbutton
-          color="green"
-          size="s2"
-          :top="0"
-          :left="16"
           :label="labelPauseP"
           :active="keyboard['pause']"
           ref="dom_p"
+        />
+          <vbutton
+          color="red"
+          size="s2"
+          :top="0"
+          :left="16"
+          :label="labelExitE"
+          :active="keyboard['exitGame']"
+          ref="dom_e"
         />
       </div>
 </template>

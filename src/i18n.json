@@ -127,6 +127,12 @@
       "en": "Drop",
       "fr": "Tomber",
       "fa": "سقوط"
+    },
+    "exitGame":{
+      "cn": "退出",
+      "en": "exit",
+      "fr": "Fin du jeu",
+      "fa": "پایان بازی"
     }
   }
 }
