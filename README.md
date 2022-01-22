@@ -16,7 +16,8 @@
 
 2、 点击右上角的 + 
 
-3、复制 最新的发行版 链接 https://github.com/webs-app/vue-tetris/releases/download/v1.1.3/tetris.zip
+3、输入 最新的发行版 的地址 
 
-4、点击获取
+4、点击获取 
+
 
